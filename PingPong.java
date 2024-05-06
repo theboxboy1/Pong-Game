@@ -51,12 +51,7 @@ public class Pong extends JFrame implements KeyListener, ActionListener {
         setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        playing = false;
-        twoPlayerMode = true;
-        playerOneScore = 0;
-        playerTwoScore = 0;
-        gameDifficulty = 1;
-
+       
         panel = new PongPanel();
         Container container = getContentPane();
         container.add(panel);
@@ -64,6 +59,14 @@ public class Pong extends JFrame implements KeyListener, ActionListener {
         keysPressed = new boolean[256];
         paddleOne = null;
         paddleTwo = null;
+
+        playing = false;
+        gameDifficulty = 1;
+        twoPlayerMode = true;
+        playerOneScore = 0;
+        playerTwoScore = 0;
+        
+
 
         JMenuBar menuBar = new JMenuBar();
         setJMenuBar(menuBar);
